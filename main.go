@@ -13,14 +13,14 @@ func main() {
 		})
 	})
 
-	r.GET("/animal/:name", func(c *gin.Context) {
-		animal, err := database.GetAnimal(c.Param("name"))
+	r.GET("/product/:id", func(c *gin.Context) {
+		product, err := database.GetProduct(c.Param("id"))
 		if err != nil {
 			c.String(404, err.Error())
 			return
 		}
-		c.JSON(200, animal)
+		c.JSON(200, product)
 	})
 
-	r.Run(":3000")
+	r.Run(":8900")
 }

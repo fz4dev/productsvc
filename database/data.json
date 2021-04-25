@@ -1,13 +1,14 @@
-[{
-        "name": "cat",
-        "sound": "meow"
+[  
+    {
+        "id": "ambp16",
+        "name": "Apple",
+        "description": "Apple MacBook Pro 16",
+        "inventory": "13"
     },
     {
-        "name": "dog",
-        "sound": "woof"
-    },
-    {
-        "name": "cow",
-        "sound": "mooo"
+        "id": "dxps13",
+        "name": "Dell", 
+        "description": "Dell Insprion XPS 13",
+        "inventory": "19"
     }
 ]

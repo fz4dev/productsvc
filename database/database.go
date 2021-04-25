@@ -8,14 +8,23 @@ import (
 	"os"
 )
 
+/**
+  "id": "ambp16",
+  "name": "Apple",
+  "description": "Apple MacBook Pro 16",
+  "inventory": "13"
+*/
+
 type (
-	animal struct {
-		Name  string `json:"name"`
-		Sound string `json:"sound"`
+	product struct {
+		Id          string `json:"id"`
+		Name        string `json:"name"`
+		Description string `json:"description"`
+		Inventory   string `json:"inventory"`
 	}
 )
 
-var animals []animal
+var products []product
 
 func init() {
 	wd, err := os.Getwd()
@@ -33,19 +42,19 @@ func init() {
 		er(err)
 	}
 
-	err = json.Unmarshal(byteFile, &animals)
+	err = json.Unmarshal(byteFile, &products)
 	if err != nil {
 		er(err)
 	}
 }
 
-func GetAnimal(name string) (*animal, error) {
-	for _, v := range animals {
-		if name == v.Name {
+func GetProduct(id string) (*product, error) {
+	for _, v := range products {
+		if id == v.Id {
 			return &v, nil
 		}
 	}
-	return nil, errors.New("No animal found")
+	return nil, errors.New("No product found")
 }
 
 func er(msg interface{}) {
