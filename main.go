@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/afdolriski/golang-docker/database"
+	"github.com/fzuchows/productsvc/database"
 	"github.com/gin-gonic/gin"
 )
 
