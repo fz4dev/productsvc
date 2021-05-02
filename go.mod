@@ -1,5 +1,5 @@
-module github.com/afdolriski/golang-docker
+module github.com/fz4dev/productsvc
 
-go 1.13
+go 1.16
 
-require github.com/gin-gonic/gin v1.5.0
+require github.com/gin-gonic/gin v1.7.1 // indirect

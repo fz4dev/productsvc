@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/fzuchows/productsvc/database"
+	"github.com/fz4dev/productsvc/database"
 	"github.com/gin-gonic/gin"
 )
 
